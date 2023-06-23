@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { forbidExtraProps } from 'airbnb-prop-types';
+import { forbidExtraProps } from '../src/airbnb-prop-types/airbnb-prop-types';
 import { withStyles, withStylesPropTypes } from 'react-with-styles';
 
 import { DayPickerKeyboardShortcutsPhrases } from '../defaultPhrases';

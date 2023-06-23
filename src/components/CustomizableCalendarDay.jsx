@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import momentPropTypes from 'react-moment-proptypes';
-import { forbidExtraProps, nonNegativeInteger, or } from 'airbnb-prop-types';
 import { withStyles, withStylesPropTypes } from 'react-with-styles';
 import moment from 'moment';
 import raf from 'raf';
 
+import { forbidExtraProps, nonNegativeInteger, or } from '../airbnb-prop-types/airbnb-prop-types';
 import { CalendarDayPhrases } from '../defaultPhrases';
 import getPhrasePropTypes from '../utils/getPhrasePropTypes';
 import getCalendarDaySettings from '../utils/getCalendarDaySettings';
@@ -305,6 +305,7 @@ class CustomizableCalendarDay extends React.PureComponent {
 
     const { isHovered } = this.state;
 
+    // eslint-disable-next-line jsx-a11y/control-has-associated-label
     if (!day) return <td />;
 
     const {

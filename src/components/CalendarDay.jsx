@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import momentPropTypes from 'react-moment-proptypes';
-import { forbidExtraProps, nonNegativeInteger } from 'airbnb-prop-types';
 import { withStyles, withStylesPropTypes } from 'react-with-styles';
 import moment from 'moment';
 import raf from 'raf';
+
+import { forbidExtraProps, nonNegativeInteger } from '../airbnb-prop-types/airbnb-prop-types';
 
 import { CalendarDayPhrases } from '../defaultPhrases';
 import getPhrasePropTypes from '../utils/getPhrasePropTypes';
@@ -110,6 +111,7 @@ class CalendarDay extends React.PureComponent {
       phrases,
     } = this.props;
 
+    // eslint-disable-next-line jsx-a11y/control-has-associated-label
     if (!day) return <td />;
 
     const {

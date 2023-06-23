@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { forbidExtraProps } from 'airbnb-prop-types';
 import { withStyles, withStylesPropTypes } from 'react-with-styles';
+
+import { forbidExtraProps } from '../airbnb-prop-types/airbnb-prop-types';
 
 import { DayPickerNavigationPhrases } from '../defaultPhrases';
 import getPhrasePropTypes from '../utils/getPhrasePropTypes';

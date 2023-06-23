@@ -2,10 +2,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import momentPropTypes from 'react-moment-proptypes';
-import { forbidExtraProps } from 'airbnb-prop-types';
 import moment from 'moment';
 import omit from 'lodash/omit';
 
+import { forbidExtraProps } from '../src/airbnb-prop-types/airbnb-prop-types';
 import DayPickerRangeController from '../src/components/DayPickerRangeController';
 
 import ScrollableOrientationShape from '../src/shapes/ScrollableOrientationShape';
@@ -77,7 +77,7 @@ const defaultProps = {
   renderDayContents: null,
   minimumNights: 1,
   isDayBlocked: () => false,
-  isOutsideRange: day => !isInclusivelyAfterDay(day, moment()),
+  isOutsideRange: (day) => !isInclusivelyAfterDay(day, moment()),
   isDayHighlighted: () => false,
   enableOutsideDays: false,
   daysViolatingMinNightsCanBeClicked: false,

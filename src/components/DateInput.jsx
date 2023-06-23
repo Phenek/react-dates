@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { forbidExtraProps, nonNegativeInteger } from 'airbnb-prop-types';
 import { withStyles, withStylesPropTypes } from 'react-with-styles';
 import throttle from 'lodash/throttle';
 import isTouchDevice from 'is-touch-device';
+
+import { forbidExtraProps, nonNegativeInteger } from '../airbnb-prop-types/airbnb-prop-types';
 
 import noflip from '../utils/noflip';
 import getInputHeight from '../utils/getInputHeight';

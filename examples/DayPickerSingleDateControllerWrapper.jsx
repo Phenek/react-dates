@@ -2,10 +2,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import momentPropTypes from 'react-moment-proptypes';
-import { forbidExtraProps } from 'airbnb-prop-types';
 import moment from 'moment';
 import omit from 'lodash/omit';
 
+import { forbidExtraProps } from '../src/airbnb-prop-types/airbnb-prop-types';
 import DayPickerSingleDateController from '../src/components/DayPickerSingleDateController';
 
 import ScrollableOrientationShape from '../src/shapes/ScrollableOrientationShape';
@@ -61,7 +61,7 @@ const defaultProps = {
   renderCalendarDay: undefined,
   renderDayContents: null,
   isDayBlocked: () => false,
-  isOutsideRange: day => !isInclusivelyAfterDay(day, moment()),
+  isOutsideRange: (day) => !isInclusivelyAfterDay(day, moment()),
   isDayHighlighted: () => false,
   enableOutsideDays: false,
 
